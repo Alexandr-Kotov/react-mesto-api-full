@@ -1,0 +1,4 @@
+.elements__container-likes{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,11 @@
+.authform {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 260px;
+}
+
+@media screen and (min-width: 768px) {
+  .authform {
+    max-width: 358px;
+  }
+}

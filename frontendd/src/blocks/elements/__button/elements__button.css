@@ -1,0 +1,17 @@
+.elements__button{
+    background: url('../../../images/elements__button.svg') no-repeat;
+    background-size: 22px 19px;
+    background-position: center;
+    padding: 0;
+    width: 22px;
+    height: 19px;
+    border: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.elements__button:hover{
+    opacity: 0.5;
+}

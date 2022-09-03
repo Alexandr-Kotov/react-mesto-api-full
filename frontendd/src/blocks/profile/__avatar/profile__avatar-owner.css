@@ -1,0 +1,30 @@
+.profile__avatar-owner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.profile__avatar-owner:hover {
+  opacity: 0.8;
+}
+
+.profile__avatar-owner::before {
+  content: "";
+  background: url(../../../images/profile__button-edit.svg);
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+}

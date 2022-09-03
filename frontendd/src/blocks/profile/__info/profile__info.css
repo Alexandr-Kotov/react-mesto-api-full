@@ -1,0 +1,14 @@
+.profile__info{
+    max-width: 336px;
+    min-height: 73px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: baseline;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__info{
+        align-content: space-between;
+    }
+}

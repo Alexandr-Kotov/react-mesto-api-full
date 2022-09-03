@@ -1,0 +1,7 @@
+.elements__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 25px 20px 0 21px;
+}
