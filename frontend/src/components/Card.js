@@ -13,7 +13,7 @@ export function Card({ card, onCardClick, onLikeClick, onDeleteClick }) {
   
     return (
         <div className="elements__card">
-        {isOwner ? (
+        {isOwner ? ( 
           <button className="elements__delete" type="button" onClick={handleDeleteClick}></button>
         ) : (
           <></>
