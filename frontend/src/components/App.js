@@ -77,14 +77,20 @@ function App() {
       })
       .catch((err) => console.log(err));
 
-  const closeAllPopups = () => {
+  const closeAllPopups = (e) => {
+    if (
+      e.type === 'keydown' ||
+      e.target.classList.contains('popup_opened') ||
+      e.target.classList.contains('popup__close')
+    ) {
       setIsAddPlacePopupOpen(false);
       setIsEditAvatarPopupOpen(false);
       setIsEditProfilePopupOpen(false);
-      setSelectedCard(null);
       setErrorPopupOpen(false);
       setSuccessPopupOpen(false);
-    };
+      setSelectedCard(null);
+    }
+  };;
 
   const handleUserUpdate = (user) =>
     api

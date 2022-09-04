@@ -107,9 +107,9 @@ export const authApi = new Api({
 });
 
 export const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-37',
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-41',
   headers: {
-    authorization: '4681c571-88f6-4ca4-b1b2-2741f41c35d8',
+    authorization: 'ebc67657-0665-4140-96c2-0d00b9af553e',
     'Content-Type': 'application/json'
   }
 });
