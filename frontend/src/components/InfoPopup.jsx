@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export const InfoPopup = ({ children, isOpen, onClose }) => {
   const handleEscClose = (e) => e.key === "Escape" && onClose(e);

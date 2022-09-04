@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export function PopupWithForm({ title, name, children, isOpen, onClose, buttonText, onSubmit }){
 

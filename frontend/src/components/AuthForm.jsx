@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 export const AuthForm = ({ onSubmit, title, buttonLabel, hint }) => {
   const [email, setEmail] = useState(null);

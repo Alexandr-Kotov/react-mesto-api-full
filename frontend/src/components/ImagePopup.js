@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export function ImagePopup({ onClose, card }) {
   const handleEscClose = (e) => e.key === "Escape" && onClose(e);
