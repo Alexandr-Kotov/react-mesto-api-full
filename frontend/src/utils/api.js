@@ -107,9 +107,6 @@ export const authApi = new Api({
 });
 
 export const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-41',
-  headers: {
-    authorization: 'ebc67657-0665-4140-96c2-0d00b9af553e',
-    'Content-Type': 'application/json'
-  }
+  baseUrl: 'https://alexandr.kotov.students.nomoredomains.sbs/',
+  headers: { "Content-Type": "application/json" },
 });
