@@ -98,15 +98,9 @@ class Api {
   }
 }
 
-export const authApi = new Api({
-  baseUrl: "https://auth.nomoreparties.co",
-  headers: {
-    "Content-Type": "application/json",
-    authorization: `Bearer ${localStorage.getItem("jwt")}`,
-  },
-});
-
 export const api = new Api({
-  baseUrl: 'https://alexandr.kotov.students.nomoredomains.sbs/',
-  headers: { "Content-Type": "application/json" },
+  baseUrl: 'api.alexandr.kotov.students.nomoredomains.sbs',
+  headers: {
+    "Content-Type": "application/json"
+  },
 });
