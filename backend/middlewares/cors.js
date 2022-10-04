@@ -1,6 +1,6 @@
 const allowedCors = [
   'http://localhost:3001',
-  'https://mesto.bestpicture.pro',
+  'https://alexandr.kotov.students.nomoredomains.sbs',
 ];
 
 module.exports = (req, res, next) => {

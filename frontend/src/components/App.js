@@ -1,4 +1,4 @@
-import { api, authApi } from "../utils/api";
+import { api } from "../utils/api";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { Header } from "./Header";
 import { Main } from "./Main";
@@ -39,9 +39,7 @@ function App() {
   }, [currentUser.isLoggedIn]);
 
   useEffect(() => {
-    const jwt = localStorage.getItem("jwt");
-    if (jwt) {
-      authApi
+      api
         .getProfile()
         .then((res) => {
           setCurrentUser((prev) => {
@@ -49,7 +47,6 @@ function App() {
           });
         })
         .catch((error) => console.log(error));
-    }
   }, []);
 
 
@@ -124,13 +121,13 @@ function App() {
       .catch((err) => console.log(err));
 
   const handleRegistration = (signupPayload) =>
-   authApi
+   api
     .signup(signupPayload)
     .then(handleSuccess)
     .catch(handleError);
 
   const handleLogin = (loginPayload) =>
-    authApi
+    api
       .signin(loginPayload)
       .then((res) => {
         localStorage.setItem("jwt", res.token);

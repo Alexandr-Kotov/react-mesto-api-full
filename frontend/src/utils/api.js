@@ -11,7 +11,8 @@ class Api {
 
   getProfile(){
     return fetch(`${this._baseUrl}/users/me`,{
-      headers: this._headers
+      headers: this._headers,
+      credentials: 'include',
     })  
     .then(this._handleResponse)
   }
@@ -20,6 +21,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
+      credentials: 'include',
       body: JSON.stringify(me),
     })
     .then(this._handleResponse)
@@ -27,7 +29,8 @@ class Api {
 
   getCardSever(){
     return fetch(`${this._baseUrl}/cards`,{
-      headers: this._headers
+      headers: this._headers,
+      credentials: 'include',
     })
     .then(this._handleResponse)
   }
@@ -36,6 +39,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
+      credentials: 'include',
       body: JSON.stringify(card),
     })
     .then(this._handleResponse)
@@ -45,6 +49,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${id}`,{
       method: 'DELETE',
       headers: this._headers,
+      credentials: 'include',
     })
     .then(this._handleResponse)
   }
@@ -54,6 +59,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: `${hasMyLike ? "DELETE" : "PUT"}`,
       headers: this._headers,
+      credentials: 'include',
     })
     .then(this._handleResponse)
   }
@@ -63,6 +69,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${id}/likes`,{
       method: 'PUT',
       headers: this._headers,
+      credentials: 'include',
     })
     .then(this._handleResponse)
   }
@@ -72,6 +79,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       headers: this._headers,
+      credentials: 'include',
       body: JSON.stringify({ 
         avatar: avatarLink
       })
@@ -83,6 +91,7 @@ class Api {
     return fetch(`${this._baseUrl}/signup`, {
       method: "POST",
       headers: this._headers,
+      credentials: 'include',
       body: JSON.stringify(singupPayload),
     })
     .then(this._handleResponse)
@@ -92,6 +101,7 @@ class Api {
     return fetch(`${this._baseUrl}/signin`, {
       method: "POST",
       headers: this._headers,
+      credentials: 'include',
       body: JSON.stringify(signinPayload),
     })
     .then(this._handleResponse)

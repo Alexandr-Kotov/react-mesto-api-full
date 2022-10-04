@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import { authApi } from "../utils/api";
 import { AuthForm } from "./AuthForm";
 
 export const Register = ({ onSubmit }) => {
