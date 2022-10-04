@@ -29,4 +29,4 @@ Backend https://api.alexandr.kotov.students.nomoredomains.sbs
 - Mongo Atlas DB
 
 ### Live preview
-[Mesto app](http://alexandr.kotov.students.nomoredomains.sbs/)
+[Mesto app](https://alexandr.kotov.students.nomoredomains.sbs/)
