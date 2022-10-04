@@ -1,5 +1,5 @@
 class Api {
-  constructor({options}) {
+  constructor(options) {
     this._baseUrl = options.baseUrl;
     this._headers = options.headers;
   }
@@ -106,7 +106,15 @@ class Api {
     })
     .then(this._handleResponse)
   }
+  
+  logout() {
+    return fetch(`${this._baseUrl}/logout`, {
+      headers: this._headers,
+      credentials: 'include',
+    }).then((res) => this._resHandler(res));
+  }
 }
+
 
 export const api = new Api({
   baseUrl: 'https://api.alexandr.kotov.students.nomoredomains.sbs',

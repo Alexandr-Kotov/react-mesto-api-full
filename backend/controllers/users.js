@@ -44,6 +44,18 @@ module.exports.getMe = async (req, res, next) => {
   }
 };
 
+module.exports.logout = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user._id);
+    if (user) {
+      res.clearCookie('jwt');
+      res.send({ message: 'Совершен выход' });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports.login = async (req, res, next) => {
   const { email, password } = req.body;
   try {

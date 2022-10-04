@@ -130,17 +130,22 @@ function App() {
     api
       .signin(loginPayload)
       .then((res) => {
-        localStorage.setItem("jwt", res.token);
         currentUser.isLoggedIn = true;
         currentUser.email = loginPayload.email;
         navigate("/");
       })
       .catch(handleError);
 
-  const handleLogout = () => {
-    localStorage.removeItem("jwt");
+  const handleLogout = async () => {
+    try {
+      await api.logout()
+    }
+    catch(err) {
+      setCurrentUser({ isLoggedIn: false });
+      navigate('/sign-in');
+    }
     setCurrentUser({ isLoggedIn: false });
-    navigate("/sign-in");
+    navigate('/sign-in');
   };
 
   const handleSuccessPopupClose = (e) => {
