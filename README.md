@@ -10,7 +10,7 @@
 
 ## Ссылки на проект
 
-IP-51.250.90.89
+IP 51.250.90.89
 
 Frontend https://alexandr.kotov.students.nomoredomains.sbs
 
