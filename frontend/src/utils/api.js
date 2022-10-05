@@ -106,12 +106,13 @@ class Api {
     })
     .then(this._handleResponse)
   }
-  
+
   logout() {
     return fetch(`${this._baseUrl}/logout`, {
       headers: this._headers,
       credentials: 'include',
-    }).then((res) => this._resHandler(res));
+    })
+    .then(this._handleResponse)
   }
 }
 

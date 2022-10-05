@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const { celebrate, Joi, errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { handleError } = require('./errors/handleError');
-const { login, createUser } = require('./controllers/users');
+const { login, createUser, logout } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const cors = require('./middlewares/cors');
 const NotFoundError = require('./errors/NotFoundError');
@@ -55,13 +55,14 @@ app.post(
   createUser,
 );
 
+app.get('/logout', logout);
 app.use(auth);
 app.use('/users', require('./routes/users'));
 app.use('/cards', require('./routes/cards'));
 
-app.use(errorLogger);
-
 app.use((req, res, next) => next(new NotFoundError('Маршрут не найден')));
+
+app.use(errorLogger);
 app.use(errors());
 
 app.use((err, req, res, next) => handleError({ res, err, next }));
