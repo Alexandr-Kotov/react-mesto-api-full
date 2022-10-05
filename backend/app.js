@@ -55,8 +55,8 @@ app.post(
   createUser,
 );
 
-app.get('/logout', logout);
 app.use(auth);
+app.get('/logout', logout);
 app.use('/users', require('./routes/users'));
 app.use('/cards', require('./routes/cards'));
 
